@@ -11,6 +11,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  background: white;
+  top: 0;
+  z-index: 1;
 }
 
 .header_logo {
@@ -41,16 +45,6 @@ button {
 }
 
 /* Body */
-
-.about__image{
-  width: 500px;
-
-}
-
-.about__sun-image{
-width: 100px;
-height: 100px;
-}
 
 .about{
   display: flex;
@@ -86,6 +80,17 @@ height: 100px;
   max-width: 550px;
 }
 
+.about__image{
+  width: 500px;
+}
+
+.about__sun-image {
+  width: 100px;
+  height: 100px;
+  animation: rotation 10s infinite linear;
+  position: absolute
+}
+
 /* Form1 */
 
 .form__container {
@@ -93,14 +98,14 @@ height: 100px;
 }
 
 .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #1D263A;
   color: #fff;
   padding-top: 115px;
   padding-bottom: 115px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .form h1 {
@@ -205,3 +210,89 @@ footer {
   flex-direction: column;
   margin-bottom: 15px;
 }
+
+/*   Animation Sun*/
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/*   Mobile version */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .about {
+      padding: 115px 20px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 720px) {
+  header {
+      padding: 10px;
+  }
+
+  .header__logo {
+      height: 20px;
+  }
+
+  header a {
+      margin-right: 10px;
+  }
+
+  .about {
+      flex-direction: column-reverse;
+      padding: 50px 10px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+
+  .form {
+      padding: 50px 10px;
+  }
+
+  .form h1 {
+      font-size: 36px;
+  }
+
+  footer {
+      padding: 50px 10px;
+  }
+
+  .footer__container {
+      flex-direction: column;
+  }
+}
+
