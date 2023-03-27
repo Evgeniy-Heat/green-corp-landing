@@ -44,9 +44,21 @@ button {
   transition: background-color 0.3s;
 }
 
+
+/* convas */
+
+.orb-canvas {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
+}
+
+
 /* Body */
 
-.about{
+.about {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -58,29 +70,29 @@ button {
   background-size: cover;
 }
 
-.about h1{
+.about h1 {
   font-size: 70px;
   line-height: 76px;
 }
 
-.about p{
+.about p {
   font-size: 18px;
   line-height: 30px;
   opacity: 0.8;
 }
 
-.about button{
+.about button {
   font-size: 18px;
   border-radius: 20px;
   padding: 20px 25px;
   margin-top: 20px;
 }
 
-.about__info{
+.about__info {
   max-width: 550px;
 }
 
-.about__image{
+.about__image {
   width: 500px;
 }
 
